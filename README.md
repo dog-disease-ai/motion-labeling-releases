@@ -1,5 +1,73 @@
-# Motion Labeling Tool Releases
+# Motion Labeling Tool
 
-반려견 IMU/BCG 센서 데이터 행동 라벨링 툴 배포 저장소.
+반려견의 행동 데이터를 손쉽게 기록하고 분류하는 라벨링 툴입니다.
 
-다운로드: [Releases](https://github.com/dog-disease-ai/motion-labeling-releases/releases/latest)
+반려견이 착용한 센서(IMU/BCG)로 수집된 데이터와 촬영된 이미지를 함께 보면서, 어느 시간대에 어떤 행동을 했는지 직접 표시(라벨링)할 수 있습니다. 기록된 데이터는 반려견 건강 모니터링 AI 모델 학습에 활용됩니다.
+
+---
+
+## 다운로드
+
+아래 링크에서 최신 버전을 내려받으세요.
+
+**[최신 버전 다운로드 →](https://github.com/dog-disease-ai/motion-labeling-releases/releases/latest)**
+
+| 운영체제 | 파일 |
+|---|---|
+| **macOS** (Apple Silicon / Intel 모두 지원) | `MotionLabelingTool_*.dmg` |
+| **Windows** | `MotionLabelingTool_*_x64-setup.exe` |
+
+---
+
+## 설치 방법
+
+### macOS
+1. `.dmg` 파일을 다운로드합니다.
+2. 파일을 열어 **MotionLabelingTool** 아이콘을 **Applications** 폴더로 드래그합니다.
+3. 처음 실행 시 "확인되지 않은 개발자" 경고가 뜰 수 있습니다.  
+   → **Finder에서 앱 아이콘을 우클릭 → 열기**로 실행하세요.
+
+### Windows
+1. `_x64-setup.exe` 파일을 다운로드합니다.
+2. 파일을 실행하면 자동으로 설치됩니다.
+3. "Windows의 PC 보호" 경고가 뜨면 **추가 정보 → 실행**을 클릭하세요.
+
+---
+
+## 주요 기능
+
+- **센서 데이터 시각화**: 7개 채널(BCG·가속도·자이로) 그래프를 실시간으로 확인
+- **이미지 동기화**: 센서 데이터와 촬영 이미지를 시간 기준으로 자동 정렬
+- **행동 라벨링**: 배변·배뇨·취식·음수 4가지 행동을 구간으로 표시
+- **자동 업데이트**: 새 버전이 나오면 앱 실행 시 자동으로 알림
+
+---
+
+## 라벨링할 수 있는 행동
+
+| 행동 | 설명 |
+|---|---|
+| 배변 | 대변 |
+| 배뇨 | 소변 |
+| 취식 | 음식 섭취 |
+| 음수 | 물 섭취 |
+
+---
+
+## 자주 묻는 질문
+
+**Q. 업데이트는 어떻게 하나요?**  
+앱을 실행하면 새 버전이 있을 때 자동으로 팝업이 뜹니다. "업데이트" 를 누르면 자동으로 설치됩니다.
+
+**Q. macOS에서 "손상된 파일" 오류가 뜨면요?**  
+터미널에서 아래 명령어를 실행한 뒤 다시 열어보세요.
+```
+xattr -d com.apple.quarantine /Applications/MotionLabelingTool.app
+```
+
+**Q. 데이터는 어디에 저장되나요?**  
+라벨링한 내용은 데이터 폴더 안의 `checked/` 폴더에 자동 저장됩니다.
+
+---
+
+개발·문의: [CareSix Inc.](https://cotons.ai)

@@ -71,4 +71,5 @@ xattr -d com.apple.quarantine /Applications/MotionLabelingTool.app
 ---
 
 개발·문의: [CareSix Inc.](https://cotons.ai)
+
 연락: mssun@cotons.ai
